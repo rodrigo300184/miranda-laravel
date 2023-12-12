@@ -1,0 +1,62 @@
+html,
+* {
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  min-width: 320px;
+}
+
+.main-title {
+  @include main-title;
+  &-white {
+    color: $white;
+  }
+  &-black {
+    color: $black;
+  }
+  &-centered{
+    text-align: center;
+  }
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.second-subtitle {
+  //REVISAR
+  text-transform: capitalize;
+  font-family: var(--old-font);
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+}
+
+.third-subtitle {
+  @include third-subtitle;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main-title {
+    &-white {
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 72px;
+      letter-spacing: -2.16px;
+      &--big {
+        font-size: 120px;
+        font-style: normal;
+        line-height: 130px;
+        letter-spacing: -3.6px;
+        max-width: 700px;
+      }
+    }
+  }
+}
