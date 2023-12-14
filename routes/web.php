@@ -19,4 +19,9 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/about', [AboutController::class,"index"]);
-Route::get('/contact', [ContactController::class,"index"]);
+
+
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'index');
+    Route::post('/contact', 'store');
+});

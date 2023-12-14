@@ -60,17 +60,18 @@
   </div>
   <!-- Contact Form -->
   <form action="/contact" method="POST" class="contact_form" id="">
+  @csrf
     <div class="contact_form_container">
       <div class="contact_form_container--inner">
-        <input class="contact_input contact_input_name" type="text" name="name" id="name" placeholder="Your full name" required />
-        <input class="contact_input contact_input_phone" type="text" name="phone" id="phone" placeholder="Add phone number" required />
+        <input class="contact_input contact_input_name" type="text" name="full_name" id="name" placeholder="Your full name" required />
+        <input class="contact_input contact_input_phone" type="text" name="phone_number" id="phone" placeholder="Add phone number" required />
       </div>
       <div class="contact_form_container--inner">
         <input class="contact_input contact_input_email" type="email" name="email" id="email" placeholder="Enter email address" required />
-        <input class="contact_input contact_input_subject" type="text" name="subject" id="subject" placeholder="Enter subject" required />
+        <input class="contact_input contact_input_subject" type="text" name="subject_of_review" id="subject" placeholder="Enter subject" required />
       </div>
     </div>
-    <textarea class="contact_text-area" name="contactMessage" id="contactMessage" required placeholder="Enter message"></textarea>
+    <textarea class="contact_text-area" name="review_body" id="contactMessage" required placeholder="Enter message"></textarea>
     <input class="button button_centered button_regular button_regular--gold button_text" type="submit" value="SEND" />
   </form>
 </section>
